@@ -1,6 +1,7 @@
 import type { Config } from "tailwindcss";
 
 const config: Config = {
+  darkMode: ["class"],
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -9,9 +10,19 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        beige: { 500: "#98908B", 100: "#F8F4F0" },
-        slate: { 600: "#666CA3" },
-        grey: { 900: "#201F24", 500: "#696868", 300: "#B3B3B3", 100: "#F2F2F2" },
+        beige: {
+          "100": "#F8F4F0",
+          "500": "#98908B",
+        },
+        slate: {
+          "600": "#666CA3",
+        },
+        grey: {
+          "100": "#F2F2F2",
+          "300": "#B3B3B3",
+          "500": "#696868",
+          "900": "#201F24",
+        },
         green: "#277C78",
         yellow: "#F2CDAC",
         cyan: "#82C9D7",
@@ -32,23 +43,28 @@ const config: Config = {
         white: "#FFFFFF",
       },
       fontFamily: {
-        sans: ['Public Sans Bold', 'sans-serif'],
-        mono: ['Public Sans Regular', 'sans-serif'],
+        sans: ["Public Sans Bold", "sans-serif"],
+        mono: ["Public Sans Regular", "sans-serif"],
       },
       fontSize: {
-        'preset-1': ['32px', '120%'],
-        'preset-2': ['20px', '120%'],
-        'preset-3': ['16px', '150%'],
-        'preset-4': ['14px', '150%'],
-        'preset-5': ['12px', '150%'],
+        "preset-1": ["32px", "120%"],
+        "preset-2": ["20px", "120%"],
+        "preset-3": ["16px", "150%"],
+        "preset-4": ["14px", "150%"],
+        "preset-5": ["12px", "150%"],
       },
       spacing: {
-        50: '4px', 100: '8px', 150: '12px', 200: '16px', 
-        250: '20px', 300: '24px', 400: '32px', 500: '40px'
+        "50": "4px",
+        "100": "8px",
+        "150": "12px",
+        "200": "16px",
+        "250": "20px",
+        "300": "24px",
+        "400": "32px",
+        "500": "40px",
       },
     },
   },
-  plugins: [],
 };
 
 export default config;

@@ -3,19 +3,18 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: 'Public Sans Bold';
-  src: url('/fonts/PublicSans-Bold.ttf') format('woff');
+  font-family: "Public Sans Bold";
+  src: url("/assets/fonts/PublicSans-Bold.ttf") format("woff");
   font-weight: 100 900;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Public Sans Regular';
-  src: url('/fonts/PublicSans-Regular.ttf') format('woff');
+  font-family: "Public Sans Regular";
+  src: url("/assets/fonts/PublicSans-Regular.ttf") format("woff");
   font-weight: 100 900;
   font-style: normal;
 }
-
 
 * {
   margin: 0;
