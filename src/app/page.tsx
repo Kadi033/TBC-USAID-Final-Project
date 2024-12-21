@@ -16,9 +16,9 @@ export default function Home() {
       <header>
         <h1 className="text-preset-1 font-sans px-5 py-5">Overview</h1>
       </header>
-      <main>
-        <div className="flex flex-col items-center mx-5">
-          <div className="bg-grey-900 w-full h-28 rounded-xl my-4 ">
+      <main className="mb-5">
+        <div className="flex flex-col items-center mx-5 mb-8">
+          <div className="bg-grey-900 w-full h-28 rounded-xl my-2 ">
             <h2 className="text-white font-mono text-preset-4 px-4 py-4">
               Current Balance
             </h2>
@@ -26,7 +26,7 @@ export default function Home() {
               $4,835.00
             </h1>
           </div>
-          <div className="bg-white w-full  h-28 rounded-xl my-4 ">
+          <div className="bg-white w-full  h-28 rounded-xl my-2 ">
             <h2 className="text-grey-900 font-mono text-preset-4 px-4 py-4">
               Income
             </h2>
@@ -34,7 +34,7 @@ export default function Home() {
               $3,814.25
             </h1>
           </div>
-          <div className="bg-white w-full  h-28 rounded-xl my-4 ">
+          <div className="bg-white w-full  h-28 rounded-xl my-2 ">
             <h2 className="text-grey-900 font-mono text-preset-4 px-4 py-4">
               Income
             </h2>
@@ -45,7 +45,7 @@ export default function Home() {
         </div>
         <div className="bg-white rounded-xl mx-5 px-5 py-6">
           <div className="flex items-center justify-between">
-            <h1 className="text-grey-900 font-sans text-preset-1 py-5">Pots</h1>
+            <h1 className="text-grey-900 font-sans text-preset-2 ">Pots</h1>
             <div className="flex items-center gap-2">
               <p className="text-grey-500 font-mono text-preset-4">
                 See Details
@@ -251,13 +251,47 @@ export default function Home() {
           </div>
           <h1 className="text-center text-grey-900">No available budgets</h1>
         </div>
+        <div className="bg-white rounded-xl mx-5 p-5  mt-5">
+        <div className="flex items-center justify-between">
+            <h1 className="text-grey-900 font-sans text-preset-2 py-5">
+            Recurring Bills
+            </h1>
+            <div className="flex items-center gap-2">
+              <p className="text-grey-500 font-mono text-preset-4">
+                See Details
+              </p>
+              <Image
+                width={12}
+                height={12}
+                src={"/assets/icons/Icon=caret-right.png"}
+                alt="person"
+                priority
+                className="rounded-full filter brightness-[0] saturate-[100%] invert-[42%] sepia-[6%] hue-rotate-[333deg] contrast-[80%]"
+              />
+            </div>
+          </div>
+          <div className="flex flex-col gap-3">
+            <div className="bg-beige-100 py-5 px-4 flex justify-between rounded-lg border-l-4 border-green ">
+              <p className="text-grey-500 font-mono text-preset-4">Paid Bills</p>
+              <p className="text-grey-900 font-sans text-preset-4">$190.00</p>
+            </div>
+            <div className="bg-beige-100 py-5 px-4 flex justify-between rounded-lg border-l-4 border-yellow ">
+              <p className="text-grey-500 font-mono text-preset-4">Total Upcoming</p>
+              <p className="text-grey-900 font-sans text-preset-4">$194.98</p>
+            </div>
+            <div className="bg-beige-100 py-5 px-4 flex justify-between rounded-lg border-l-4 border-cyan ">
+              <p className="text-grey-500 font-mono text-preset-4">Due Soon</p>
+              <p className="text-grey-900 font-sans text-preset-4">$59.98</p>
+            </div>
+          </div>
+        </div>
       </main>
-      <footer className="pt-2 px-4 flex  items-start bg-gray-900 text-white sticky bottom-0 h-[52px] rounded-t-lg ">
-        <nav className=" flex justify-between w-full">
+      <footer className="pt-1 px-4 flex  items-start bg-[#201f24] text-white sticky bottom-0 h-[52px] rounded-t-lg ">
+        <nav className=" flex justify-between w-full ">
           <button
             onClick={() => handleClick(0)}
-            className={`flex items-center justify-center w-[73px] pt-2 pb-3 rounded ${
-              activeIndex === 0 ? "bg-white" : "bg-gray-900"
+            className={`flex items-center justify-center w-[73px] pt-2 pb-3 rounded-tl-lg rounded-tr-lg ${
+              activeIndex === 0 ? "bg-white border-b-4 border-green" : "bg-[#201f24]"
             } `}
           >
             <svg
@@ -276,8 +310,8 @@ export default function Home() {
 
           <button
             onClick={() => handleClick(1)}
-            className={`flex items-center justify-center w-[73px] pt-2 pb-3 rounded ${
-              activeIndex === 1 ? "bg-white" : "bg-gray-900"
+            className={`flex items-center justify-center w-[73px] pt-2 pb-3 rounded-tl-lg rounded-tr-lg ${
+              activeIndex === 1 ? "bg-white border-b-4 border-green" : "bg-[#201f24]"
             } `}
           >
             <svg
@@ -295,8 +329,8 @@ export default function Home() {
           </button>
           <button
             onClick={() => handleClick(2)}
-            className={`flex items-center justify-center w-[73px] pt-2 pb-3 rounded ${
-              activeIndex === 2 ? "bg-white" : "bg-gray-900"
+            className={`flex items-center justify-center w-[73px] pt-2 pb-3 rounded-tl-lg rounded-tr-lg ${
+              activeIndex === 2 ? "bg-white border-b-4 border-green" : "bg-[#201f24]"
             } `}
           >
             <svg
@@ -314,8 +348,8 @@ export default function Home() {
           </button>
           <button
             onClick={() => handleClick(3)}
-            className={`flex items-center justify-center w-[73px] pt-2 pb-3 rounded ${
-              activeIndex === 3 ? "bg-white" : "bg-gray-900"
+            className={`flex items-center justify-center w-[73px] pt-2 pb-3 rounded-tl-lg rounded-tr-lg ${
+              activeIndex === 3 ? "bg-white border-b-4 border-green" : "bg-[#201f24]"
             } `}
           >
             <svg
@@ -333,8 +367,8 @@ export default function Home() {
           </button>
           <button
             onClick={() => handleClick(4)}
-            className={`flex items-center justify-center w-[73px] pt-2 pb-3 rounded ${
-              activeIndex === 4 ? "bg-white" : "bg-gray-900"
+            className={`flex items-center justify-center w-[73px] pt-2 pb-3  rounded-tl-lg rounded-tr-lg ${
+              activeIndex === 4 ? "bg-white border-b-4 border-green" : "bg-[#201f24]"
             } `}
           >
             <svg
