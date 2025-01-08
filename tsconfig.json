@@ -22,6 +22,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "pages/doughnut.js", "src/components/cart/chart.js", "src/components/cart/chart.js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "pages/doughnut.js", "src/components/cart/chart.js", "src/components/cart/chart.js", "src/app/budgets/page.jsx", "src/components/modal.jsx"],
   "exclude": ["node_modules"]
 }
