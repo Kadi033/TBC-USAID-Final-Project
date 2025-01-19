@@ -9,11 +9,11 @@ function Footer() {
   const isActive = (path: string): boolean => pathname === path;
 
   return (
-    <footer className="pt-2 px-4 flex items-start bg-[#201f24] text-white h-[56px] rounded-t-lg fixed bottom-0 w-full">
+    <footer className="pt-2 px-4 flex items-start bg-[#201f24] text-white h-[56px] rounded-t-lg fixed bottom-0 w-full md:h-[74px] lg:hidden">
       <nav className=" flex justify-between w-full ">
         <Link href="/">
           <button
-            className={`flex items-center justify-center w-[73px] pt-2 pb-3 rounded-tl-lg rounded-tr-lg ${
+            className={`flex flex-col gap-1 items-center justify-center w-[73px] pt-2 pb-3 rounded-tl-lg rounded-tr-lg md:pb-1 md:w-[110px] ${
               isActive("/")
                 ? "bg-white border-b-4 border-green"
                 : "bg-[#201f24]"
@@ -31,12 +31,13 @@ function Footer() {
                 fill={isActive("/") ? "#277C78" : "#B3B3B3"}
               />
             </svg>
+            <p className={`max-md:hidden md:text-preset-5 font-sans ${ isActive("/") ? "text-grey-900" : "text-[#B3B3B3]"}`}>Overview</p>
           </button>
         </Link>
 
         <Link href="/transactions">
           <button
-            className={`flex items-center justify-center w-[73px] pt-2 pb-3 rounded-tl-lg rounded-tr-lg ${
+            className={`flex flex-col gap-1 items-center justify-center w-[73px] pt-2 pb-3 rounded-tl-lg rounded-tr-lg md:pb-1 md:w-[110px] ${
               isActive("/transactions")
                 ? "bg-white border-b-4 border-green"
                 : "bg-[#201f24]"
@@ -54,11 +55,12 @@ function Footer() {
                 fill={isActive("/transactions") ? "#277C78" : "#B3B3B3"}
               />
             </svg>
+            <p className={`max-md:hidden md:text-preset-5 font-sans ${ isActive("/transactions") ? "text-grey-900" : "text-[#B3B3B3]"}`}>Transactions</p>
           </button>
         </Link>
         <Link href="/pots">
           <button
-            className={`flex items-center justify-center w-[73px] pt-2 pb-3 rounded-tl-lg rounded-tr-lg ${
+            className={`flex flex-col gap-1 items-center justify-center w-[73px] pt-2 pb-3 rounded-tl-lg rounded-tr-lg  md:pb-1 md:w-[110px] ${
               isActive("/pots")
                 ? "bg-white border-b-4 border-green"
                 : "bg-[#201f24]"
@@ -76,11 +78,12 @@ function Footer() {
                 fill={isActive("/pots") ? "#277C78" : "#B3B3B3"}
               />
             </svg>
+            <p className={`max-md:hidden md:text-preset-5 font-sans ${ isActive("/pots") ? "text-grey-900" : "text-[#B3B3B3]"}`}>Pots</p>
           </button>
         </Link>
         <Link href="/bills">
           <button
-            className={`flex items-center justify-center w-[73px] pt-2 pb-3 rounded-tl-lg rounded-tr-lg ${
+            className={`flex flex-col gap-1 items-center justify-center w-[73px] pt-2 pb-3 rounded-tl-lg rounded-tr-lg md:pb-1 md:w-[110px] ${
               isActive("/bills")
                 ? "bg-white border-b-4 border-green"
                 : "bg-[#201f24]"
@@ -98,6 +101,7 @@ function Footer() {
                 fill={isActive("/bills") ? "#277C78" : "#B3B3B3"}
               />
             </svg>
+            <p className={`max-md:hidden md:text-preset-5 font-sans ${ isActive("/bills") ? "text-grey-900" : "text-[#B3B3B3]"}`}>Recurring Bills</p>
           </button>
         </Link>
       </nav>

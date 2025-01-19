@@ -1,12 +1,15 @@
 import Footer from "@/components/Footer";
+import PcFooter from "@/components/PcFooter";
 import Image from "next/image";
 export default function Transactions() {
   return (
-    <section>
-      <header>
+    <section className="lg:flex">
+      <PcFooter />
+      <div className="w-full lg:ml-[300px]">
+      <header className="lg:pt-3 pl-5">
         <h1 className="text-preset-1 font-sans px-5 py-5">Transactions</h1>
       </header>
-      <main className="mb-20">
+      <main className="mb-20 lg:mb-5 pl-5">
         <div className="bg-white rounded-tl-xl rounded-tr-xl px-5 py-6 mt-2 mx-5 gap-6 flex items-center justify-between ">
           <div className="relative">
             <input
@@ -193,6 +196,8 @@ export default function Transactions() {
           </div>
         </div>
       </main>
+      </div>
+      
       <Footer />
     </section>
   );

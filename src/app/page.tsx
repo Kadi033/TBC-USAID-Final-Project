@@ -1,14 +1,17 @@
 import Footer from "@/components/Footer";
+import PcFooter from "@/components/PcFooter";
 import Image from "next/image";
 export default function Home() {
 
   return (
-    <section>
-      <header>
+    <section className="lg:flex">
+      <PcFooter />
+      <div className="w-full lg:ml-[300px]">
+      <header className="lg:pt-3 pl-5">
         <h1 className="text-preset-1 font-sans px-5 py-5">Overview</h1>
       </header>
-      <main className="mb-20">
-        <div className="flex flex-col items-center mx-5 mb-8">
+      <main className="mb-20 lg:mb-5 pl-5">
+        <div className="flex flex-col items-center mx-5 mb-8 md:flex-row gap-0 md:gap-6">
           <div className="bg-grey-900 w-full h-28 rounded-xl my-2 ">
             <h2 className="text-white font-mono text-preset-4 px-4 py-4">
               Current Balance
@@ -34,7 +37,8 @@ export default function Home() {
             </h1>
           </div>
         </div>
-        <div className="bg-white rounded-xl mx-5 px-5 py-6">
+        <div className="bg-white rounded-xl mx-5 px-5 py-6 md:flex flex-col ">
+          
           <div className="flex items-center justify-between">
             <h1 className="text-grey-900 font-sans text-preset-2 ">Pots</h1>
             <div className="flex items-center gap-2">
@@ -52,7 +56,9 @@ export default function Home() {
               />
             </div>
           </div>
-          <div className="flex gap-4 items-center rounded-xl bg-grey-100 py-4 px-4 mt-5">
+
+          <div className="flex flex-col md:flex-row justify-around gap-5">
+          <div className="flex gap-4 items-center rounded-xl bg-grey-100 py-4 px-4 mt-5 w-full">
             <svg
               _ngcontent-ng-c2202246646=""
               xmlns="http://www.w3.org/2000/svg"
@@ -77,15 +83,16 @@ export default function Home() {
               </h1>
             </div>
           </div>
-          <div className="flex gap-4 justify-between mt-5">
-            <div className="flex gap-4 w-36">
+          <div className="flex flex-col">
+          <div className="flex gap-4 justify-between mt-5 ">
+            <div className="flex gap-6 w-36 md:w-44">
               <div className="w-1 h-11 bg-green rounded-lg"></div>
               <div className="flex flex-col">
                 <p className="text-gray-500 text-preset-5 font-mono">Savings</p>
                 <h1 className="text-gray-900 text-preset-4 font-sans">$159</h1>
               </div>
             </div>
-            <div className="flex gap-4 w-36">
+            <div className="flex gap-6 w-36 md:w-44">
               <div className="w-1 h-11 bg-cyan rounded-lg"></div>
               <div className="flex flex-col">
                 <p className="text-gray-500 text-preset-5 font-mono">Gift</p>
@@ -94,7 +101,7 @@ export default function Home() {
             </div>
           </div>
           <div className="flex gap-4 justify-between mt-4">
-            <div className="flex gap-4 w-36">
+            <div className="flex gap-6 w-36 md:w-44">
               <div className="w-1 h-11 bg-navy rounded-lg"></div>
               <div className="flex flex-col">
                 <p className="text-gray-500 text-preset-5 font-mono">
@@ -103,7 +110,7 @@ export default function Home() {
                 <h1 className="text-gray-900 text-preset-4 font-sans">$110</h1>
               </div>
             </div>
-            <div className="flex gap-4 w-36">
+            <div className="flex gap-6 w-36 md:w-44">
               <div className="w-1 h-11 bg-yellow rounded-lg"></div>
               <div className="flex flex-col">
                 <p className="text-gray-500 text-preset-5 font-mono">
@@ -114,6 +121,10 @@ export default function Home() {
             </div>
           </div>
         </div>
+          </div>
+          
+          </div>
+          
         <div className="bg-white rounded-xl mx-5 p-5  mt-5">
           <div className="flex items-center justify-between">
             <h1 className="text-grey-900 font-sans text-preset-1">
@@ -277,6 +288,8 @@ export default function Home() {
           </div>
         </div>
       </main>
+      </div>
+      
       <Footer />
     </section>
   );
